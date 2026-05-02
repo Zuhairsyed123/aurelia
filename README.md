@@ -1,7 +1,5 @@
 # AURELIA - Luxury Fashion E-commerce
 
-![Aurelia Home Page](https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1600&auto=format&fit=crop&q=80)
-
 A sophisticated, minimalist luxury fashion e-commerce web application featuring an editorial design and a Python-powered AI Concierge.
 
 ## Features
