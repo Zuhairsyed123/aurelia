@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Inquiry</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header" style="background: var(--color-obsidian); padding: 1rem 5%; color: white;">
+        <div class="logo" style="color: white;">AURELIA</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color: white;">Shop</a></li>
+                <li><a href="about.html" style="color: white;">Brand Story</a></li>
+                <li><a href="contact.html" style="color: white; border-bottom: 1px solid var(--color-champagne);">Inquiry</a></li>
+            </ul>
+        </nav>
+        <button class="cart-toggle" id="cart-toggle" style="color: white;">
+            Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <div class="page-header fade-in">
+        <h1>Private Inquiry</h1>
+        <p>Reach out to our dedicated concierge team for personalized assistance.</p>
+    </div>
+
+    <div class="page-content fade-in">
+        <form id="contact-form" class="fade-in">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" required placeholder="Personal Styling, Order Inquiry...">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="6" required placeholder="How may we assist you?"></textarea>
+            </div>
+            <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+        </form>
+        
+        <div style="margin-top: 4rem; text-align: center; color: #666; font-size: 0.9rem;">
+            <p>Our boutiques are located in Paris, Milan, and New York.</p>
+            <p>For immediate assistance, please use our AI Concierge located at the bottom right.</p>
+        </div>
+    </div>
+
+    <!-- Cart Drawer & Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

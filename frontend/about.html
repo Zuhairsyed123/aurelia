@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Brand Story</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header" style="background: var(--color-obsidian); padding: 1rem 5%; color: white;">
+        <div class="logo" style="color: white;">AURELIA</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color: white;">Shop</a></li>
+                <li><a href="about.html" style="color: white; border-bottom: 1px solid var(--color-champagne);">Brand Story</a></li>
+                <li><a href="contact.html" style="color: white;">Inquiry</a></li>
+            </ul>
+        </nav>
+        <button class="cart-toggle" id="cart-toggle" style="color: white;">
+            Cart (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <div class="page-header fade-in">
+        <h1>Our Heritage</h1>
+        <p>A commitment to uncompromising quality and timeless aesthetics.</p>
+    </div>
+
+    <div class="page-content fade-in">
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-obsidian);">The Aurelia Vision</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #444;">
+            Founded on the principles of minimalist elegance and superior craftsmanship, Aurelia is not merely a fashion label; it is an exploration of refined living. We believe that true luxury whispers rather than shouts.
+        </p>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #444;">
+            Every piece in our collection is meticulously designed to transcend seasonal trends, serving as a foundational element of a sophisticated wardrobe. We source only the finest materials globally—from the historic silk mills of Como, Italy, to the ethical cashmere collectives in the heart of Mongolia.
+        </p>
+        <div style="margin: 4rem 0;">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&auto=format&fit=crop&q=80" alt="Craftsmanship" style="width: 100%; object-fit: cover;">
+        </div>
+        <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: var(--color-obsidian);">Sustainable Luxury</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #444;">
+            Our dedication extends beyond aesthetics to encompassing ethical responsibility. Aurelia operates on a made-to-order or small-batch model, significantly reducing waste. Our packaging is fully recyclable, utilizing natural dyes and sustainably harvested paper.
+        </p>
+    </div>
+
+    <!-- Cart Drawer & Overlay (needed globally) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Selection</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <a href="checkout.html" class="btn checkout-btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

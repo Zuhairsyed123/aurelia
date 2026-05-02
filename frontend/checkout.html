@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURELIA | Checkout</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="header" style="background: var(--color-obsidian); padding: 1rem 5%; color: white;">
+        <div class="logo" style="color: white;">AURELIA</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" style="color: white;">Shop</a></li>
+                <li><a href="about.html" style="color: white;">Brand Story</a></li>
+                <li><a href="contact.html" style="color: white;">Inquiry</a></li>
+            </ul>
+        </nav>
+        <button class="cart-toggle" id="cart-toggle" style="color: white; visibility: hidden;">
+            <!-- Hidden on checkout to prevent issues -->
+        </button>
+    </header>
+
+    <div class="page-header fade-in" style="padding-top: 8rem; padding-bottom: 2rem;">
+        <h1>Secure Checkout</h1>
+    </div>
+
+    <div class="checkout-container fade-in">
+        <div class="checkout-form-area">
+            <h2 style="margin-bottom: 2rem;">Shipping & Payment Details</h2>
+            <form id="checkout-form">
+                <h3 style="margin-bottom: 1rem; font-family: var(--font-body); font-weight: 500;">Shipping Information</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Street Address" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <input type="text" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Zip / Postal Code" required>
+                    </div>
+                </div>
+
+                <h3 style="margin: 2rem 0 1rem; font-family: var(--font-body); font-weight: 500;">Payment Information</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Card Number" required>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <input type="text" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="CVC" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="checkout-submit-btn" class="btn" style="width: 100%; margin-top: 2rem; background: var(--color-champagne); color: var(--color-white); border: none;">Place Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary" id="checkout-summary-area">
+            <h2 style="margin-bottom: 2rem;">Order Summary</h2>
+            <div id="checkout-summary">
+                <!-- Summary injected via JS -->
+            </div>
+            <div style="margin-top: 2rem; font-size: 0.85rem; color: #666;">
+                <p>By placing your order, you agree to our Terms and Conditions.</p>
+                <p>Complimentary express shipping applied.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Drawer logic to prevent errors if JS looks for it -->
+    <div id="cart-drawer" style="display:none;"></div>
+    <div id="cart-overlay" style="display:none;"></div>
+    <div id="cart-items-container" style="display:none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
